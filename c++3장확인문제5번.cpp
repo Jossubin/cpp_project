@@ -24,3 +24,16 @@ void ConverSecond::setData() {
     cout << "초(second) 입력: ";
     cin >> second;
 }
+
+int ConverSecond::getResult(){
+    return hour*3600 + minute*60 + second;
+}
+int main() {
+    
+    ConverSecond a;
+    a.setData();
+    cout << "입력하신 시간은 총" << a.getResult() << "초 입니다."<<endl;
+    
+    ConverSecond b;
+    cout << "기본 시간은 총" << b.getResult() << "초 입니다." <<endl;
+}
